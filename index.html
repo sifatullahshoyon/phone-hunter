@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="py-5">
+        <h1 class="text-center">Welcome to Phone Hunter.</h1>
+    </header>
+    <!-- End Header -->
+    <main>
+      <section id="search-phone" class="container mx-auto pt-5">
+        <div class="g-3 w-100">
+          <div class="col-auto d-flex">
+            <div class="w-50 me-3">
+              <label for="inputText" class="visually-hidden"></label>
+              <input type="text" class="form-control w-100" id="inputText" placeholder="Search Your Phone">
+            </div>
+            <div class="w-50">
+              <button type="submit" id="search-btn" class="btn btn-primary mb-3" onclick="searchPhone()">Search</button>
+            </div>
+          </div>
+        </div> 
+      </section>
+      <!-- End Search Phone -->
+        <section id="phone-card" class="container pb-5">
+            <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+            <!-- End Phone container -->
+            <!-- start No phone found -->
+            <div id="no-phone-found" class="d-none py-4">
+              <p  class="text-warning fw-bold fs-3">No Phone Found. Please try a new Search</p>
+            </div>
+            <!-- End No phone found -->
+            <div id="show-all" class="pt-5 text-center d-none">
+              <div id="show-btn" class="btn btn-primary">Show All</div>
+            </div>
+            <!-- End Show All -->
+        </section>
+        <!-- End Phone Card -->
+        <section>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="phone-modal-body" class="modal-body">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </section>
+        <!-- End modal Section -->
+        <section id="loder-section">
+          <div style="height: 400px;" id="spinner" class="d-flex justify-content-center align-items-center d-none">
+            <div class="spinner-border text-success" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </section>
+        <!-- End Spinner -->
+    </main>
+    <!-- End Main -->
+    <footer>
+      <section class="h-50 bg-body-tertiary">
+        <div class="text-center p-5 fs-3">
+          <p>&copy;Phone Hunter 2023
+          </p>
+        </div>
+      </section>
+    </footer>
+    <!-- End Footer -->
+    <!-- Add Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./js/phone-hunter.js"></script>
+  </body>
+</html>
